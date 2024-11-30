@@ -27,6 +27,42 @@ $result = $data["results"];
             </style>
 </head>
 <body>
+<div class="overflow-auto">   
+<table>
+<thead>
+    <tr >
+        <th>Year</th>
+        <th>Semester</th>
+        <th>The Programs</th>
+        <th>Nationality </th>
+        <th>Collages</th>
+        <th>Number of Students</th>
+       
+        
 
+</tr>
+</thead>
+<tbody>
+    <?php
+    
+    foreach($result as $students) {
+        ?>
+        <tr>
+        <td><?php echo $students["year"];?></td>
+        <td><?php echo $students["semester"]; ?></td>
+        <td><?php echo $students["the_programs"]; ?></td>
+        <td><?php echo $students["nationality"]; ?></td>
+        <td><?php echo $students["colleges"]; ?></td>
+        <td><?php echo $students["number_of_students"]; ?></td>
+        
+
+        </tr>
+        <?php
+    }
+
+    ?>
+    </tbody>
+</table>
+</div>
 </body>
 </html>
